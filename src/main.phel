@@ -4,34 +4,6 @@
   (:use PhpParser\Error :as PPError)
   (:use PhpParser\ParserFactory))
 
-
-# Ref: https://www.billerickson.net/code/wp_query-arguments/
-
-(def code  # WP_Query args meta_query
-  (str
-   "[  // TODO narrow down to ones with bulletin set"
-   "	'relation' => 'AND',"
-   "	["
-   "		'key' => 'cf_bulletin_enabled',"
-   "		'value' => 'yes'"
-   "	],"
-   "	["
-   "		'relation' => 'OR',"
-   "		["
-   "			'key' => 'cf_pinned_until',"
-   "			'value' => '',"
-   "			'compare' => '='"
-   "		],"
-   "		["
-   "			'key' => 'cf_pinned_until',"
-   "			'value' => date('Y-m-d', strtotime('-1 day')), // includes today's bulletins"
-   "			//'value' => date('Y-m-d'), // today's not included"
-   "			'compare' => '>',"
-   "			'type' => 'DATETIME'"
-   "		]"
-   "	]"
-   "]"))
-
 (defn read-php-ast [s]
   (-> (php/new ParserFactory)
       (php/-> (createForNewestSupportedVersion))
@@ -39,7 +11,13 @@
       (php/json_encode php/JSON_PRETTY_PRINT)
       (json/decode)))
 
-(def ast (read-php-ast code))
+(comment
+  (read-php-ast (php/file_get_contents "src/wp-query-meta.php"))
+  (read-php-ast (php/file_get_contents "src/wp-query-full.php"))
 
-(when-not *build-mode*
-  (println ast))
+  (def code (php/file_get_contents "src/wp-query-meta.php"))
+
+  (def ast (read-php-ast code))
+  (keys ast)
+  (tree-seq )
+  )
