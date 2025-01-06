@@ -1,6 +1,10 @@
+Inspecting abstract syntax tree of [WP_Query](https://developer.wordpress.org/reference/classes/wp_query/query/) [args](https://www.billerickson.net/code/wp_query-arguments/) using [PhpParse](https://github.com/nikic/PHP-Parser) for validating raw PHP values that could be provided by user.
+
+Template readme continues..
+
 # Phel Cli Skeleton
 
-[Phel](https://phel-lang.org/) is a functional programming language that compiles to PHP. 
+[Phel](https://phel-lang.org/) is a functional programming language that compiles to PHP.
 
 This repository provides you the basic setup to start coding phel.
 
