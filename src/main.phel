@@ -33,12 +33,11 @@
    "]"))
 
 (defn read-php-ast [s]
-  (let [parser (php/-> (php/new ParserFactory) (createForNewestSupportedVersion))
-        ast-php (php/-> parser (parse code))
-        ast-json (php/json_encode ast-php php/JSON_PRETTY_PRINT)
-        ast (json/decode ast-json)]
-    ast))
-
+  (-> (php/new ParserFactory)
+      (php/-> (createForNewestSupportedVersion))
+      (php/-> (parse s))
+      (php/json_encode php/JSON_PRETTY_PRINT)
+      (json/decode)))
 
 (def ast (read-php-ast code))
 
