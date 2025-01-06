@@ -1,0 +1,10 @@
+(ns cli-skeleton-tests\demo
+  (:require cli-skeleton\demo :refer [ast-php ast-json ast])
+  (:require phel\test :refer [deftest is])
+  )
+
+(deftest test-demo
+  (is (= (type ast-php) :php/array))
+  (is (= (type ast-json) :string))
+  (is (= (type ast) :vector))
+  )
