@@ -1,5 +1,9 @@
 (ns cli-skeleton\main
-  (:require cli-skeleton\modules\adder-module :refer [adder]))
+  (:require-file "vendor/autoload.php")
+  (:use PhpParser\Error :as PPError)
+  (:use PhpParser\NodeDumper)
+  (:use PhpParser\ParserFactory))
+
 
 (when-not *build-mode*
-  (println (adder 1 2 3)))
+  (println (+ 1 2 3)))
