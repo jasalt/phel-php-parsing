@@ -36,12 +36,12 @@
     (println ast-json-pretty)))
 
 (comment
-  (print-ast-json (read-php-ast (php/file_get_contents "src/wp-query-meta.php")))
+  (print-ast-json (read-php-ast (php/file_get_contents "src/inputs/wp-query-meta.php")))
 
-  (read-php-ast (php/file_get_contents "src/wp-query-meta.php"))
-  (read-php-ast (php/file_get_contents "src/wp-query-full.php"))
+  (read-php-ast (php/file_get_contents "src/inputs/wp-query-meta.php"))
+  (read-php-ast (php/file_get_contents "src/inputs/wp-query-full.php"))
 
-  (def code (php/file_get_contents "src/wp-query-meta.php"))
+  (def code (php/file_get_contents "src/inputs/wp-query-meta.php"))
 
   (def ast (read-php-ast code))
   (count (first ast))
@@ -57,5 +57,5 @@
       :nodeType
       )
 
-  (tree-seq )
+  # (tree-seq ) # TODO
   )
