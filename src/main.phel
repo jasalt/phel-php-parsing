@@ -4,20 +4,42 @@
   (:use PhpParser\Error :as PPError)
   (:use PhpParser\ParserFactory))
 
-(def code
-"<?php
-function test($foo)
-{
-    var_dump($foo);
-}
-CODE;
-"
-)
 
-(def parser (php/-> (php/new ParserFactory) (createForNewestSupportedVersion)))
-(def ast-php (php/-> parser (parse code)))
-(def ast-json (php/json_encode ast-php php/JSON_PRETTY_PRINT))
-(def ast (json/decode ast-json))
+
+(def code  # WP_Query args
+  (str
+   "[  // TODO narrow down to ones with bulletin set"
+   "	'relation' => 'AND',"
+   "	["
+   "		'key' => 'cf_bulletin_enabled',"
+   "		'value' => 'yes'"
+   "	],"
+   "	["
+   "		'relation' => 'OR',"
+   "		["
+   "			'key' => 'cf_pinned_until',"
+   "			'value' => '',"
+   "			'compare' => '='"
+   "		],"
+   "		["
+   "			'key' => 'cf_pinned_until',"
+   "			'value' => date('Y-m-d', strtotime('-1 day')), // includes today's bulletins"
+   "			//'value' => date('Y-m-d'), // today's not included"
+   "			'compare' => '>',"
+   "			'type' => 'DATETIME'"
+   "		]"
+   "	]"
+   "]"))
+
+(defn read-php-ast [s]
+  (let [parser (php/-> (php/new ParserFactory) (createForNewestSupportedVersion))
+        ast-php (php/-> parser (parse code))
+        ast-json (php/json_encode ast-php php/JSON_PRETTY_PRINT)
+        ast (json/decode ast-json)]
+    ast))
+
+
+(def ast (read-php-ast code))
 
 (when-not *build-mode*
   (println ast))
