@@ -2,16 +2,42 @@
   (:require-file "vendor/autoload.php")
   (:require phel\json :as json)
   (:use PhpParser\Error :as PPError)
+  (:use PhpParser\JsonDecoder :as PPJsonDecoder)
+  (:use PhpParser\NodeDumper :as NodeDumper)
   (:use PhpParser\ParserFactory))
 
-(defn read-php-ast [s]
+(defn read-php-ast
+  "Read PHP source AST using PhpParser converting it to Phel data."
+  [s]
   (-> (php/new ParserFactory)
       (php/-> (createForNewestSupportedVersion))
       (php/-> (parse s))
       (php/json_encode php/JSON_PRETTY_PRINT)
       (json/decode)))
 
+(defn print-ast-pp
+  "Pretty print AST by decoding it back for PhpParser library, returns nil."
+  [ast]
+  (let [decoder (php/new PPJsonDecoder)
+        dumper (php/new NodeDumper)
+        ast-json (json/encode ast)
+        ast-pp (php/-> decoder (decode ast-json))]
+    (println (php/-> dumper (dump ast-pp)))))
+
+(defn print-ast-json
+  "Pretty print AST as formatted JSON.
+   Decoding it back for PhpParser library, returns nil."
+  [ast]
+  (let [decoder (php/new PPJsonDecoder)
+        dumper (php/new NodeDumper)
+        ast-json (json/encode ast)  # PhpParser provides formatted json
+        ast-pp (php/-> decoder (decode ast-json))
+        ast-json-pretty (php/json_encode ast-pp php/JSON_PRETTY_PRINT)]
+    (println ast-json-pretty)))
+
 (comment
+  (print-ast-json (read-php-ast (php/file_get_contents "src/wp-query-meta.php")))
+
   (read-php-ast (php/file_get_contents "src/wp-query-meta.php"))
   (read-php-ast (php/file_get_contents "src/wp-query-full.php"))
 
