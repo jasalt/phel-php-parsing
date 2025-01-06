@@ -18,6 +18,18 @@
   (def code (php/file_get_contents "src/wp-query-meta.php"))
 
   (def ast (read-php-ast code))
-  (keys ast)
+  (count (first ast))
+
+  (-> ast
+      first
+      keys
+      )
+  # [:nodeType :attributes :expr]
+
+  (-> ast
+      first
+      :nodeType
+      )
+
   (tree-seq )
   )
