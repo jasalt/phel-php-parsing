@@ -1,12 +1,13 @@
 (ns cli-skeleton\main
-  (:require phel\json :as json)
   (:require-file "vendor/autoload.php")
+  (:require phel\json :as json)
   (:use PhpParser\Error :as PPError)
   (:use PhpParser\ParserFactory))
 
 
+# Ref: https://www.billerickson.net/code/wp_query-arguments/
 
-(def code  # WP_Query args
+(def code  # WP_Query args meta_query
   (str
    "[  // TODO narrow down to ones with bulletin set"
    "	'relation' => 'AND',"
