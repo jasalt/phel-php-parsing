@@ -4,6 +4,24 @@
   (:use PhpParser\NodeDumper)
   (:use PhpParser\ParserFactory))
 
+(def code
+"<?php
+function test($foo)
+{
+    var_dump($foo);
+}
+CODE;
+"
+)
+
+(def parser (php/-> (php/new ParserFactory) (createForNewestSupportedVersion)))
+
+(def ast (php/-> parser (parse code)))
+
+(def dumper (php/new NodeDumper))
+
+(defn dump-ast []
+  (php/-> dumper (dump ast)))
 
 (when-not *build-mode*
-  (println (+ 1 2 3)))
+  (println (dump-ast)))
