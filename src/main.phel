@@ -1,7 +1,7 @@
 (ns cli-skeleton\main
+  (:require phel\json :as json)
   (:require-file "vendor/autoload.php")
   (:use PhpParser\Error :as PPError)
-  (:use PhpParser\NodeDumper)
   (:use PhpParser\ParserFactory))
 
 (def code
@@ -15,13 +15,9 @@ CODE;
 )
 
 (def parser (php/-> (php/new ParserFactory) (createForNewestSupportedVersion)))
-
-(def ast (php/-> parser (parse code)))
-
-(def dumper (php/new NodeDumper))
-
-(defn dump-ast []
-  (php/-> dumper (dump ast)))
+(def ast-php (php/-> parser (parse code)))
+(def ast-json (php/json_encode ast-php php/JSON_PRETTY_PRINT))
+(def ast (json/decode ast-json))
 
 (when-not *build-mode*
-  (println (dump-ast)))
+  (println ast))
