@@ -1,0 +1,857 @@
+[
+    {
+        "nodeType": "Stmt_Expression",
+        "attributes": {
+            "startLine": 6,
+            "startTokenPos": 6,
+            "startFilePos": 98,
+            "endLine": 30,
+            "endTokenPos": 135,
+            "endFilePos": 657,
+            "comments": [
+                {
+                    "nodeType": "Comment",
+                    "text": "\/\/ Ref: https:\/\/www.billerickson.net\/code\/wp_query-arguments\/",
+                    "line": 3,
+                    "filePos": 7,
+                    "tokenPos": 2,
+                    "endLine": 3,
+                    "endFilePos": 67,
+                    "endTokenPos": 2
+                },
+                {
+                    "nodeType": "Comment",
+                    "text": "\/\/ WP_Query args meta_query",
+                    "line": 4,
+                    "filePos": 69,
+                    "tokenPos": 4,
+                    "endLine": 4,
+                    "endFilePos": 95,
+                    "endTokenPos": 4
+                }
+            ]
+        },
+        "expr": {
+            "nodeType": "Expr_Array",
+            "attributes": {
+                "startLine": 6,
+                "startTokenPos": 6,
+                "startFilePos": 98,
+                "endLine": 30,
+                "endTokenPos": 134,
+                "endFilePos": 656,
+                "kind": 2
+            },
+            "items": [
+                {
+                    "nodeType": "ArrayItem",
+                    "attributes": {
+                        "startLine": 7,
+                        "startTokenPos": 8,
+                        "startFilePos": 101,
+                        "endLine": 7,
+                        "endTokenPos": 15,
+                        "endFilePos": 156
+                    },
+                    "key": {
+                        "nodeType": "Scalar_String",
+                        "attributes": {
+                            "startLine": 7,
+                            "startTokenPos": 8,
+                            "startFilePos": 101,
+                            "endLine": 7,
+                            "endTokenPos": 8,
+                            "endFilePos": 111,
+                            "kind": 1,
+                            "rawValue": "'post_type'"
+                        },
+                        "value": "post_type"
+                    },
+                    "value": {
+                        "nodeType": "Expr_ArrayDimFetch",
+                        "attributes": {
+                            "startLine": 7,
+                            "startTokenPos": 12,
+                            "startFilePos": 116,
+                            "endLine": 7,
+                            "endTokenPos": 15,
+                            "endFilePos": 156
+                        },
+                        "var": {
+                            "nodeType": "Expr_Variable",
+                            "attributes": {
+                                "startLine": 7,
+                                "startTokenPos": 12,
+                                "startFilePos": 116,
+                                "endLine": 7,
+                                "endTokenPos": 12,
+                                "endFilePos": 122
+                            },
+                            "name": "fields"
+                        },
+                        "dim": {
+                            "nodeType": "Scalar_String",
+                            "attributes": {
+                                "startLine": 7,
+                                "startTokenPos": 14,
+                                "startFilePos": 124,
+                                "endLine": 7,
+                                "endTokenPos": 14,
+                                "endFilePos": 155,
+                                "kind": 1,
+                                "rawValue": "'crb_bulletin_active_post_types'"
+                            },
+                            "value": "crb_bulletin_active_post_types"
+                        }
+                    },
+                    "byRef": false,
+                    "unpack": false
+                },
+                {
+                    "nodeType": "ArrayItem",
+                    "attributes": {
+                        "startLine": 8,
+                        "startTokenPos": 18,
+                        "startFilePos": 160,
+                        "endLine": 29,
+                        "endTokenPos": 131,
+                        "endFilePos": 653
+                    },
+                    "key": {
+                        "nodeType": "Scalar_String",
+                        "attributes": {
+                            "startLine": 8,
+                            "startTokenPos": 18,
+                            "startFilePos": 160,
+                            "endLine": 8,
+                            "endTokenPos": 18,
+                            "endFilePos": 171,
+                            "kind": 1,
+                            "rawValue": "'meta_query'"
+                        },
+                        "value": "meta_query"
+                    },
+                    "value": {
+                        "nodeType": "Expr_Array",
+                        "attributes": {
+                            "startLine": 8,
+                            "startTokenPos": 22,
+                            "startFilePos": 176,
+                            "endLine": 29,
+                            "endTokenPos": 131,
+                            "endFilePos": 653,
+                            "kind": 2
+                        },
+                        "items": [
+                            {
+                                "nodeType": "ArrayItem",
+                                "attributes": {
+                                    "startLine": 9,
+                                    "startTokenPos": 26,
+                                    "startFilePos": 227,
+                                    "endLine": 9,
+                                    "endTokenPos": 30,
+                                    "endFilePos": 245,
+                                    "comments": [
+                                        {
+                                            "nodeType": "Comment",
+                                            "text": "\/\/ TODO narrow down to ones with bulletin set",
+                                            "line": 8,
+                                            "filePos": 179,
+                                            "tokenPos": 24,
+                                            "endLine": 8,
+                                            "endFilePos": 223,
+                                            "endTokenPos": 24
+                                        }
+                                    ]
+                                },
+                                "key": {
+                                    "nodeType": "Scalar_String",
+                                    "attributes": {
+                                        "startLine": 9,
+                                        "startTokenPos": 26,
+                                        "startFilePos": 227,
+                                        "endLine": 9,
+                                        "endTokenPos": 26,
+                                        "endFilePos": 236,
+                                        "kind": 1,
+                                        "rawValue": "'relation'"
+                                    },
+                                    "value": "relation"
+                                },
+                                "value": {
+                                    "nodeType": "Scalar_String",
+                                    "attributes": {
+                                        "startLine": 9,
+                                        "startTokenPos": 30,
+                                        "startFilePos": 241,
+                                        "endLine": 9,
+                                        "endTokenPos": 30,
+                                        "endFilePos": 245,
+                                        "kind": 1,
+                                        "rawValue": "'AND'"
+                                    },
+                                    "value": "AND"
+                                },
+                                "byRef": false,
+                                "unpack": false
+                            },
+                            {
+                                "nodeType": "ArrayItem",
+                                "attributes": {
+                                    "startLine": 10,
+                                    "startTokenPos": 33,
+                                    "startFilePos": 250,
+                                    "endLine": 13,
+                                    "endTokenPos": 48,
+                                    "endFilePos": 309
+                                },
+                                "key": null,
+                                "value": {
+                                    "nodeType": "Expr_Array",
+                                    "attributes": {
+                                        "startLine": 10,
+                                        "startTokenPos": 33,
+                                        "startFilePos": 250,
+                                        "endLine": 13,
+                                        "endTokenPos": 48,
+                                        "endFilePos": 309,
+                                        "kind": 2
+                                    },
+                                    "items": [
+                                        {
+                                            "nodeType": "ArrayItem",
+                                            "attributes": {
+                                                "startLine": 11,
+                                                "startTokenPos": 35,
+                                                "startFilePos": 255,
+                                                "endLine": 11,
+                                                "endTokenPos": 39,
+                                                "endFilePos": 284
+                                            },
+                                            "key": {
+                                                "nodeType": "Scalar_String",
+                                                "attributes": {
+                                                    "startLine": 11,
+                                                    "startTokenPos": 35,
+                                                    "startFilePos": 255,
+                                                    "endLine": 11,
+                                                    "endTokenPos": 35,
+                                                    "endFilePos": 259,
+                                                    "kind": 1,
+                                                    "rawValue": "'key'"
+                                                },
+                                                "value": "key"
+                                            },
+                                            "value": {
+                                                "nodeType": "Scalar_String",
+                                                "attributes": {
+                                                    "startLine": 11,
+                                                    "startTokenPos": 39,
+                                                    "startFilePos": 264,
+                                                    "endLine": 11,
+                                                    "endTokenPos": 39,
+                                                    "endFilePos": 284,
+                                                    "kind": 1,
+                                                    "rawValue": "'cf_bulletin_enabled'"
+                                                },
+                                                "value": "cf_bulletin_enabled"
+                                            },
+                                            "byRef": false,
+                                            "unpack": false
+                                        },
+                                        {
+                                            "nodeType": "ArrayItem",
+                                            "attributes": {
+                                                "startLine": 12,
+                                                "startTokenPos": 42,
+                                                "startFilePos": 290,
+                                                "endLine": 12,
+                                                "endTokenPos": 46,
+                                                "endFilePos": 305
+                                            },
+                                            "key": {
+                                                "nodeType": "Scalar_String",
+                                                "attributes": {
+                                                    "startLine": 12,
+                                                    "startTokenPos": 42,
+                                                    "startFilePos": 290,
+                                                    "endLine": 12,
+                                                    "endTokenPos": 42,
+                                                    "endFilePos": 296,
+                                                    "kind": 1,
+                                                    "rawValue": "'value'"
+                                                },
+                                                "value": "value"
+                                            },
+                                            "value": {
+                                                "nodeType": "Scalar_String",
+                                                "attributes": {
+                                                    "startLine": 12,
+                                                    "startTokenPos": 46,
+                                                    "startFilePos": 301,
+                                                    "endLine": 12,
+                                                    "endTokenPos": 46,
+                                                    "endFilePos": 305,
+                                                    "kind": 1,
+                                                    "rawValue": "'yes'"
+                                                },
+                                                "value": "yes"
+                                            },
+                                            "byRef": false,
+                                            "unpack": false
+                                        }
+                                    ]
+                                },
+                                "byRef": false,
+                                "unpack": false
+                            },
+                            {
+                                "nodeType": "ArrayItem",
+                                "attributes": {
+                                    "startLine": 14,
+                                    "startTokenPos": 51,
+                                    "startFilePos": 314,
+                                    "endLine": 28,
+                                    "endTokenPos": 129,
+                                    "endFilePos": 650
+                                },
+                                "key": null,
+                                "value": {
+                                    "nodeType": "Expr_Array",
+                                    "attributes": {
+                                        "startLine": 14,
+                                        "startTokenPos": 51,
+                                        "startFilePos": 314,
+                                        "endLine": 28,
+                                        "endTokenPos": 129,
+                                        "endFilePos": 650,
+                                        "kind": 2
+                                    },
+                                    "items": [
+                                        {
+                                            "nodeType": "ArrayItem",
+                                            "attributes": {
+                                                "startLine": 15,
+                                                "startTokenPos": 53,
+                                                "startFilePos": 319,
+                                                "endLine": 15,
+                                                "endTokenPos": 57,
+                                                "endFilePos": 336
+                                            },
+                                            "key": {
+                                                "nodeType": "Scalar_String",
+                                                "attributes": {
+                                                    "startLine": 15,
+                                                    "startTokenPos": 53,
+                                                    "startFilePos": 319,
+                                                    "endLine": 15,
+                                                    "endTokenPos": 53,
+                                                    "endFilePos": 328,
+                                                    "kind": 1,
+                                                    "rawValue": "'relation'"
+                                                },
+                                                "value": "relation"
+                                            },
+                                            "value": {
+                                                "nodeType": "Scalar_String",
+                                                "attributes": {
+                                                    "startLine": 15,
+                                                    "startTokenPos": 57,
+                                                    "startFilePos": 333,
+                                                    "endLine": 15,
+                                                    "endTokenPos": 57,
+                                                    "endFilePos": 336,
+                                                    "kind": 1,
+                                                    "rawValue": "'OR'"
+                                                },
+                                                "value": "OR"
+                                            },
+                                            "byRef": false,
+                                            "unpack": false
+                                        },
+                                        {
+                                            "nodeType": "ArrayItem",
+                                            "attributes": {
+                                                "startLine": 16,
+                                                "startTokenPos": 60,
+                                                "startFilePos": 342,
+                                                "endLine": 20,
+                                                "endTokenPos": 82,
+                                                "endFilePos": 419
+                                            },
+                                            "key": null,
+                                            "value": {
+                                                "nodeType": "Expr_Array",
+                                                "attributes": {
+                                                    "startLine": 16,
+                                                    "startTokenPos": 60,
+                                                    "startFilePos": 342,
+                                                    "endLine": 20,
+                                                    "endTokenPos": 82,
+                                                    "endFilePos": 419,
+                                                    "kind": 2
+                                                },
+                                                "items": [
+                                                    {
+                                                        "nodeType": "ArrayItem",
+                                                        "attributes": {
+                                                            "startLine": 17,
+                                                            "startTokenPos": 62,
+                                                            "startFilePos": 348,
+                                                            "endLine": 17,
+                                                            "endTokenPos": 66,
+                                                            "endFilePos": 373
+                                                        },
+                                                        "key": {
+                                                            "nodeType": "Scalar_String",
+                                                            "attributes": {
+                                                                "startLine": 17,
+                                                                "startTokenPos": 62,
+                                                                "startFilePos": 348,
+                                                                "endLine": 17,
+                                                                "endTokenPos": 62,
+                                                                "endFilePos": 352,
+                                                                "kind": 1,
+                                                                "rawValue": "'key'"
+                                                            },
+                                                            "value": "key"
+                                                        },
+                                                        "value": {
+                                                            "nodeType": "Scalar_String",
+                                                            "attributes": {
+                                                                "startLine": 17,
+                                                                "startTokenPos": 66,
+                                                                "startFilePos": 357,
+                                                                "endLine": 17,
+                                                                "endTokenPos": 66,
+                                                                "endFilePos": 373,
+                                                                "kind": 1,
+                                                                "rawValue": "'cf_pinned_until'"
+                                                            },
+                                                            "value": "cf_pinned_until"
+                                                        },
+                                                        "byRef": false,
+                                                        "unpack": false
+                                                    },
+                                                    {
+                                                        "nodeType": "ArrayItem",
+                                                        "attributes": {
+                                                            "startLine": 18,
+                                                            "startTokenPos": 69,
+                                                            "startFilePos": 380,
+                                                            "endLine": 18,
+                                                            "endTokenPos": 73,
+                                                            "endFilePos": 392
+                                                        },
+                                                        "key": {
+                                                            "nodeType": "Scalar_String",
+                                                            "attributes": {
+                                                                "startLine": 18,
+                                                                "startTokenPos": 69,
+                                                                "startFilePos": 380,
+                                                                "endLine": 18,
+                                                                "endTokenPos": 69,
+                                                                "endFilePos": 386,
+                                                                "kind": 1,
+                                                                "rawValue": "'value'"
+                                                            },
+                                                            "value": "value"
+                                                        },
+                                                        "value": {
+                                                            "nodeType": "Scalar_String",
+                                                            "attributes": {
+                                                                "startLine": 18,
+                                                                "startTokenPos": 73,
+                                                                "startFilePos": 391,
+                                                                "endLine": 18,
+                                                                "endTokenPos": 73,
+                                                                "endFilePos": 392,
+                                                                "kind": 1,
+                                                                "rawValue": "''"
+                                                            },
+                                                            "value": ""
+                                                        },
+                                                        "byRef": false,
+                                                        "unpack": false
+                                                    },
+                                                    {
+                                                        "nodeType": "ArrayItem",
+                                                        "attributes": {
+                                                            "startLine": 19,
+                                                            "startTokenPos": 76,
+                                                            "startFilePos": 399,
+                                                            "endLine": 19,
+                                                            "endTokenPos": 80,
+                                                            "endFilePos": 414
+                                                        },
+                                                        "key": {
+                                                            "nodeType": "Scalar_String",
+                                                            "attributes": {
+                                                                "startLine": 19,
+                                                                "startTokenPos": 76,
+                                                                "startFilePos": 399,
+                                                                "endLine": 19,
+                                                                "endTokenPos": 76,
+                                                                "endFilePos": 407,
+                                                                "kind": 1,
+                                                                "rawValue": "'compare'"
+                                                            },
+                                                            "value": "compare"
+                                                        },
+                                                        "value": {
+                                                            "nodeType": "Scalar_String",
+                                                            "attributes": {
+                                                                "startLine": 19,
+                                                                "startTokenPos": 80,
+                                                                "startFilePos": 412,
+                                                                "endLine": 19,
+                                                                "endTokenPos": 80,
+                                                                "endFilePos": 414,
+                                                                "kind": 1,
+                                                                "rawValue": "'='"
+                                                            },
+                                                            "value": "="
+                                                        },
+                                                        "byRef": false,
+                                                        "unpack": false
+                                                    }
+                                                ]
+                                            },
+                                            "byRef": false,
+                                            "unpack": false
+                                        },
+                                        {
+                                            "nodeType": "ArrayItem",
+                                            "attributes": {
+                                                "startLine": 21,
+                                                "startTokenPos": 85,
+                                                "startFilePos": 425,
+                                                "endLine": 27,
+                                                "endTokenPos": 127,
+                                                "endFilePos": 646
+                                            },
+                                            "key": null,
+                                            "value": {
+                                                "nodeType": "Expr_Array",
+                                                "attributes": {
+                                                    "startLine": 21,
+                                                    "startTokenPos": 85,
+                                                    "startFilePos": 425,
+                                                    "endLine": 27,
+                                                    "endTokenPos": 127,
+                                                    "endFilePos": 646,
+                                                    "kind": 2
+                                                },
+                                                "items": [
+                                                    {
+                                                        "nodeType": "ArrayItem",
+                                                        "attributes": {
+                                                            "startLine": 22,
+                                                            "startTokenPos": 87,
+                                                            "startFilePos": 431,
+                                                            "endLine": 22,
+                                                            "endTokenPos": 91,
+                                                            "endFilePos": 456
+                                                        },
+                                                        "key": {
+                                                            "nodeType": "Scalar_String",
+                                                            "attributes": {
+                                                                "startLine": 22,
+                                                                "startTokenPos": 87,
+                                                                "startFilePos": 431,
+                                                                "endLine": 22,
+                                                                "endTokenPos": 87,
+                                                                "endFilePos": 435,
+                                                                "kind": 1,
+                                                                "rawValue": "'key'"
+                                                            },
+                                                            "value": "key"
+                                                        },
+                                                        "value": {
+                                                            "nodeType": "Scalar_String",
+                                                            "attributes": {
+                                                                "startLine": 22,
+                                                                "startTokenPos": 91,
+                                                                "startFilePos": 440,
+                                                                "endLine": 22,
+                                                                "endTokenPos": 91,
+                                                                "endFilePos": 456,
+                                                                "kind": 1,
+                                                                "rawValue": "'cf_pinned_until'"
+                                                            },
+                                                            "value": "cf_pinned_until"
+                                                        },
+                                                        "byRef": false,
+                                                        "unpack": false
+                                                    },
+                                                    {
+                                                        "nodeType": "ArrayItem",
+                                                        "attributes": {
+                                                            "startLine": 23,
+                                                            "startTokenPos": 94,
+                                                            "startFilePos": 463,
+                                                            "endLine": 23,
+                                                            "endTokenPos": 107,
+                                                            "endFilePos": 507
+                                                        },
+                                                        "key": {
+                                                            "nodeType": "Scalar_String",
+                                                            "attributes": {
+                                                                "startLine": 23,
+                                                                "startTokenPos": 94,
+                                                                "startFilePos": 463,
+                                                                "endLine": 23,
+                                                                "endTokenPos": 94,
+                                                                "endFilePos": 469,
+                                                                "kind": 1,
+                                                                "rawValue": "'value'"
+                                                            },
+                                                            "value": "value"
+                                                        },
+                                                        "value": {
+                                                            "nodeType": "Expr_FuncCall",
+                                                            "attributes": {
+                                                                "startLine": 23,
+                                                                "startTokenPos": 98,
+                                                                "startFilePos": 474,
+                                                                "endLine": 23,
+                                                                "endTokenPos": 107,
+                                                                "endFilePos": 507
+                                                            },
+                                                            "name": {
+                                                                "nodeType": "Name",
+                                                                "attributes": {
+                                                                    "startLine": 23,
+                                                                    "startTokenPos": 98,
+                                                                    "startFilePos": 474,
+                                                                    "endLine": 23,
+                                                                    "endTokenPos": 98,
+                                                                    "endFilePos": 477
+                                                                },
+                                                                "name": "date"
+                                                            },
+                                                            "args": [
+                                                                {
+                                                                    "nodeType": "Arg",
+                                                                    "attributes": {
+                                                                        "startLine": 23,
+                                                                        "startTokenPos": 100,
+                                                                        "startFilePos": 479,
+                                                                        "endLine": 23,
+                                                                        "endTokenPos": 100,
+                                                                        "endFilePos": 485
+                                                                    },
+                                                                    "name": null,
+                                                                    "value": {
+                                                                        "nodeType": "Scalar_String",
+                                                                        "attributes": {
+                                                                            "startLine": 23,
+                                                                            "startTokenPos": 100,
+                                                                            "startFilePos": 479,
+                                                                            "endLine": 23,
+                                                                            "endTokenPos": 100,
+                                                                            "endFilePos": 485,
+                                                                            "kind": 1,
+                                                                            "rawValue": "'Y-m-d'"
+                                                                        },
+                                                                        "value": "Y-m-d"
+                                                                    },
+                                                                    "byRef": false,
+                                                                    "unpack": false
+                                                                },
+                                                                {
+                                                                    "nodeType": "Arg",
+                                                                    "attributes": {
+                                                                        "startLine": 23,
+                                                                        "startTokenPos": 103,
+                                                                        "startFilePos": 488,
+                                                                        "endLine": 23,
+                                                                        "endTokenPos": 106,
+                                                                        "endFilePos": 506
+                                                                    },
+                                                                    "name": null,
+                                                                    "value": {
+                                                                        "nodeType": "Expr_FuncCall",
+                                                                        "attributes": {
+                                                                            "startLine": 23,
+                                                                            "startTokenPos": 103,
+                                                                            "startFilePos": 488,
+                                                                            "endLine": 23,
+                                                                            "endTokenPos": 106,
+                                                                            "endFilePos": 506
+                                                                        },
+                                                                        "name": {
+                                                                            "nodeType": "Name",
+                                                                            "attributes": {
+                                                                                "startLine": 23,
+                                                                                "startTokenPos": 103,
+                                                                                "startFilePos": 488,
+                                                                                "endLine": 23,
+                                                                                "endTokenPos": 103,
+                                                                                "endFilePos": 496
+                                                                            },
+                                                                            "name": "strtotime"
+                                                                        },
+                                                                        "args": [
+                                                                            {
+                                                                                "nodeType": "Arg",
+                                                                                "attributes": {
+                                                                                    "startLine": 23,
+                                                                                    "startTokenPos": 105,
+                                                                                    "startFilePos": 498,
+                                                                                    "endLine": 23,
+                                                                                    "endTokenPos": 105,
+                                                                                    "endFilePos": 505
+                                                                                },
+                                                                                "name": null,
+                                                                                "value": {
+                                                                                    "nodeType": "Scalar_String",
+                                                                                    "attributes": {
+                                                                                        "startLine": 23,
+                                                                                        "startTokenPos": 105,
+                                                                                        "startFilePos": 498,
+                                                                                        "endLine": 23,
+                                                                                        "endTokenPos": 105,
+                                                                                        "endFilePos": 505,
+                                                                                        "kind": 1,
+                                                                                        "rawValue": "'-1 day'"
+                                                                                    },
+                                                                                    "value": "-1 day"
+                                                                                },
+                                                                                "byRef": false,
+                                                                                "unpack": false
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    "byRef": false,
+                                                                    "unpack": false
+                                                                }
+                                                            ]
+                                                        },
+                                                        "byRef": false,
+                                                        "unpack": false
+                                                    },
+                                                    {
+                                                        "nodeType": "ArrayItem",
+                                                        "attributes": {
+                                                            "startLine": 25,
+                                                            "startTokenPos": 114,
+                                                            "startFilePos": 600,
+                                                            "endLine": 25,
+                                                            "endTokenPos": 118,
+                                                            "endFilePos": 615,
+                                                            "comments": [
+                                                                {
+                                                                    "nodeType": "Comment",
+                                                                    "text": "\/\/ includes today's bulletins",
+                                                                    "line": 23,
+                                                                    "filePos": 510,
+                                                                    "tokenPos": 110,
+                                                                    "endLine": 23,
+                                                                    "endFilePos": 538,
+                                                                    "endTokenPos": 110
+                                                                },
+                                                                {
+                                                                    "nodeType": "Comment",
+                                                                    "text": "\/\/'value' => date('Y-m-d'), \/\/ today's not included",
+                                                                    "line": 24,
+                                                                    "filePos": 544,
+                                                                    "tokenPos": 112,
+                                                                    "endLine": 24,
+                                                                    "endFilePos": 594,
+                                                                    "endTokenPos": 112
+                                                                }
+                                                            ]
+                                                        },
+                                                        "key": {
+                                                            "nodeType": "Scalar_String",
+                                                            "attributes": {
+                                                                "startLine": 25,
+                                                                "startTokenPos": 114,
+                                                                "startFilePos": 600,
+                                                                "endLine": 25,
+                                                                "endTokenPos": 114,
+                                                                "endFilePos": 608,
+                                                                "kind": 1,
+                                                                "rawValue": "'compare'"
+                                                            },
+                                                            "value": "compare"
+                                                        },
+                                                        "value": {
+                                                            "nodeType": "Scalar_String",
+                                                            "attributes": {
+                                                                "startLine": 25,
+                                                                "startTokenPos": 118,
+                                                                "startFilePos": 613,
+                                                                "endLine": 25,
+                                                                "endTokenPos": 118,
+                                                                "endFilePos": 615,
+                                                                "kind": 1,
+                                                                "rawValue": "'>'"
+                                                            },
+                                                            "value": ">"
+                                                        },
+                                                        "byRef": false,
+                                                        "unpack": false
+                                                    },
+                                                    {
+                                                        "nodeType": "ArrayItem",
+                                                        "attributes": {
+                                                            "startLine": 26,
+                                                            "startTokenPos": 121,
+                                                            "startFilePos": 622,
+                                                            "endLine": 26,
+                                                            "endTokenPos": 125,
+                                                            "endFilePos": 641
+                                                        },
+                                                        "key": {
+                                                            "nodeType": "Scalar_String",
+                                                            "attributes": {
+                                                                "startLine": 26,
+                                                                "startTokenPos": 121,
+                                                                "startFilePos": 622,
+                                                                "endLine": 26,
+                                                                "endTokenPos": 121,
+                                                                "endFilePos": 627,
+                                                                "kind": 1,
+                                                                "rawValue": "'type'"
+                                                            },
+                                                            "value": "type"
+                                                        },
+                                                        "value": {
+                                                            "nodeType": "Scalar_String",
+                                                            "attributes": {
+                                                                "startLine": 26,
+                                                                "startTokenPos": 125,
+                                                                "startFilePos": 632,
+                                                                "endLine": 26,
+                                                                "endTokenPos": 125,
+                                                                "endFilePos": 641,
+                                                                "kind": 1,
+                                                                "rawValue": "'DATETIME'"
+                                                            },
+                                                            "value": "DATETIME"
+                                                        },
+                                                        "byRef": false,
+                                                        "unpack": false
+                                                    }
+                                                ]
+                                            },
+                                            "byRef": false,
+                                            "unpack": false
+                                        }
+                                    ]
+                                },
+                                "byRef": false,
+                                "unpack": false
+                            }
+                        ]
+                    },
+                    "byRef": false,
+                    "unpack": false
+                }
+            ]
+        }
+    }
+]

@@ -37,6 +37,7 @@
 
 (comment
   (print-ast-json (read-php-ast (php/file_get_contents "src/inputs/wp-query-meta.php")))
+  (print-ast-json (read-php-ast (php/file_get_contents "src/inputs/wp-query-full.php")))
 
   (read-php-ast (php/file_get_contents "src/inputs/wp-query-meta.php"))
   (read-php-ast (php/file_get_contents "src/inputs/wp-query-full.php"))
